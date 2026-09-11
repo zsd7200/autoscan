@@ -7,5 +7,6 @@ dist/
 *.log
 /autoscan
 /config.yml
+docker-compose.yml
 
 /.task/

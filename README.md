@@ -26,9 +26,16 @@ Autoscan also improves upon [Plex Autoscan](https://github.com/l3uddz/plex_autos
 
 ## Installing autoscan
 
-Autoscan offers [pre-compiled binaries](https://github.com/Cloudbox/autoscan/releases/latest) for both Linux and MacOS for each official release. In addition, we also offer a [Docker image](#docker)!
+### docker-compose.yml (recommended)
+1. Copy the `docker-compose.yml.example` file from this repository into a folder of your choosing and rename it to `docker-compose.yml`.
+1. Create a `config` subdirectory in the same folder.
+1. Edit the `docker-compose.yml` file to correctly link to your media folder.
+1. Run using `docker compose up -d`.
 
-Alternatively, you can build the Autoscan binary yourself.
+### Pre-Compiled Binary
+Check out the [Releases](https://github.com/zsd7200/autoscan/releases/) page for pre-compiled binaries. Only tested on Ubuntu Server 24.04.
+
+### Building from Source
 To build the autoscan CLI on your system, make sure:
 
 1. Your machine runs Linux, macOS or WSL2
