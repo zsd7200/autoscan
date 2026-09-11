@@ -1,3 +1,5 @@
+## This is a fork of [Autoscan](https://github.com/Cloudbox/autoscan/) that has been modified to work with Jellyfin 12.0. If you already had Autoscan set up through Docker Compose, simply replace `cloudb0x/autoscan` with `junkerino/autoscan` and it should function without issue.
+
 Autoscan, [A-Train](https://github.com/m-rots/a-train) and [Bernard](https://github.com/m-rots/bernard-rs) are no longer actively maintained. All projects are considered feature frozen and when compatibility with Google Drive, Plex, Emby, Jellyfin and the -arrs inevitably breaks, no fixes will be provided and such an event will officially mark these projects as end of life.
 As all three projects have permissible open source licenses, feel free to start a fork and continue development. Ownership of these repositories as well as the Docker images will not be transferred.
 
@@ -540,7 +542,7 @@ host:
 
 ### Docker
 
-Autoscan has an accompanying docker image which can be found on [Docker Hub](https://hub.docker.com/r/cloudb0x/autoscan).
+Autoscan has an accompanying docker image which can be found on [Docker Hub](https://hub.docker.com/r/junkerino/autoscan).
 
 Autoscan requires access to all files being passed between the triggers and the targets. \
 *Just mount the source directory, for many people this is `/mnt/unionfs`.*
@@ -568,7 +570,7 @@ docker run \
   -v "/opt/autoscan:/config" \
   -v "/mnt/unionfs:/mnt/unionfs:ro" \
   --restart=unless-stopped \
-  -d cloudb0x/autoscan
+  -d junkerino/autoscan
 ```
 
 #### Parameters
@@ -608,5 +610,5 @@ docker run \
   --network=cloudbox \
   --network-alias=autoscan  \
   --restart=unless-stopped \
-  -d cloudb0x/autoscan
+  -d junkerino/autoscan
 ```
