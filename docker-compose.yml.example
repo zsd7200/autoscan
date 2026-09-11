@@ -1,0 +1,13 @@
+services:
+  autoscan:
+    image: junkerino/autoscan:latest
+    container_name: autoscan
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./config:/config
+      - [your media directory here]:/mnt/unionfs/Media:ro
+    ports:
+      - "3030:3030"
+    restart: unless-stopped
